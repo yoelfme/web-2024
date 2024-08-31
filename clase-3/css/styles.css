@@ -1,0 +1,27 @@
+/* Selector de Element: button { */
+/* div > button { */
+.btn {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: #4CAF50;
+}
+
+.secondary {
+    background-color: #e38221;
+}
+/* 
+#primary-button {
+    background-color: #2a8dbb;
+} */
+
+/* a[href="https://www.google.com"] {
+    color: red; */
+/* } */
+
+/* body > div:nth-child(2) > button.btn { */

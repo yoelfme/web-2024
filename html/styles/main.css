@@ -1,0 +1,23 @@
+.color-violeta {
+    color: violet;
+    font-size: 14px;
+}
+
+.blue {
+    color: blue;
+}
+
+p {
+    font-size: 12px;
+    color: seagreen;
+}
+
+body > button {
+    background-color: red;
+    color: white;
+}
+
+div > button {
+    background-color: green;
+    color: white;
+}
