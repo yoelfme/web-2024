@@ -2,19 +2,19 @@ const express = require('express');
 const { body, validationResult } = require('express-validator');
 const app = express();
 const cors = require('cors')
-const port = 3000;
+const port = 8000;
 
 // Connect to database
 const knex = require('knex')({
   client: 'pg',
   connection: {
-    // connectionString: config.DATABASE_URL,
-    host: 'localhost',
-    port: '5432',
-    user: 'postgres',
-    password: 'password123',
-    database: 'form_register',
-    ssl: false,
+    connectionString: process.env.DATABASE_URL,
+    // host: 'localhost',
+    // port: '5432',
+    // user: 'postgres',
+    // password: 'password123',
+    // database: 'form_register',
+    // ssl: false,
   },
 });
 
