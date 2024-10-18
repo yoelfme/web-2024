@@ -91,7 +91,7 @@ app.post('/register', [
     body('email').notEmpty().isEmail(),
     body('password').notEmpty(),
     body('country').notEmpty().isIn(['Guatemala', 'USA']),
-    body('genre').notEmpty().isIn(['Masculino', 'Femenino', 'L*']),
+    body('gender').notEmpty().isIn(['Masculino', 'Femenino', 'L*']),
     body('accept_terms').notEmpty().isBoolean()
   ]
 ], async (req, res) => {
@@ -100,6 +100,7 @@ app.post('/register', [
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
+    console.log(errors)
     return res.status(400).json({ errors: errors.array() });
   }
   
@@ -120,7 +121,7 @@ app.post('/register', [
       email: req.body.email,
       password: hashedPassword,
       country: req.body.country,
-      genre: req.body.genre,
+      genre: req.body.gender,
       accept_terms: req.body.accept_terms
     });
     console.log('Info stored successfully');

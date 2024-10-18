@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (isValid) {
             const myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
+            // myHeaders.append("Authorization", `Bearer ${token}`);
 
             const raw = JSON.stringify({
                 "name": firstName,
